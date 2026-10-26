@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration Form</h1>
+
+        <p class="subtitle">
+            Please fill in all the details carefully.
+        </p>
+
+        <form id="registrationForm" novalidate>
+
+            <!-- Full Name -->
+            <div class="form-group">
+
+                <label for="name">Full Name *</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    aria-describedby="nameError"
+                >
+
+                <span
+                    class="error"
+                    id="nameError"
+                    role="alert">
+                </span>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+
+                <label for="email">Email Address *</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="student@example.com"
+                    autocomplete="email"
+                    aria-describedby="emailError"
+                >
+
+                <span
+                    class="error"
+                    id="emailError"
+                    role="alert">
+                </span>
+
+            </div>
+
+
+            <!-- Mobile -->
+            <div class="form-group">
+
+                <label for="mobile">Mobile Number *</label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    placeholder="Enter 10-digit mobile number"
+                    maxlength="10"
+                    autocomplete="tel"
+                    aria-describedby="mobileError"
+                >
+
+                <span
+                    class="error"
+                    id="mobileError"
+                    role="alert">
+                </span>
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="form-group">
+
+                <label for="password">Password *</label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="new-password"
+                        aria-describedby="passwordError strengthText"
+                    >
+
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        class="toggle-password-btn"
+                        aria-label="Show password"
+                        title="Show password"
+                    >
+                        <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <svg class="eye-off-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </button>
+
+                </div>
+
+                <div class="strength-container">
+
+                    <div id="strengthBar"></div>
+
+                </div>
+
+                <p id="strengthText"></p>
+
+                <span
+                    class="error"
+                    id="passwordError"
+                    role="alert">
+                </span>
+
+            </div>
+
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+
+                <label for="confirmPassword">
+                    Confirm Password *
+                </label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Re-enter your password"
+                        autocomplete="new-password"
+                        aria-describedby="confirmPasswordError"
+                    >
+
+                    <button
+                        type="button"
+                        id="toggleConfirmPassword"
+                        class="toggle-password-btn"
+                        aria-label="Show confirm password"
+                        title="Show confirm password"
+                    >
+                        <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <svg class="eye-off-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </button>
+
+                </div>
+
+                <span
+                    class="error"
+                    id="confirmPasswordError"
+                    role="alert">
+                </span>
+
+            </div>
+
+
+            <!-- Course -->
+            <div class="form-group">
+
+                <label for="course">Course *</label>
+
+                <select
+                    id="course"
+                    name="course"
+                    aria-describedby="courseError">
+
+                    <option value="">
+                        Select your course
+                    </option>
+
+                    <option value="IT">
+                        Information Technology
+                    </option>
+
+                    <option value="CE">
+                        Computer Engineering
+                    </option>
+
+                    <option value="CSE">
+                        Computer Science
+                    </option>
+
+                    <option value="AI">
+                        Artificial Intelligence
+                    </option>
+
+                </select>
+
+                <span
+                    class="error"
+                    id="courseError"
+                    role="alert">
+                </span>
+
+            </div>
+
+
+            <!-- Year -->
+            <div class="form-group">
+
+                <label for="year">Year *</label>
+
+                <select
+                    id="year"
+                    name="year"
+                    aria-describedby="yearError">
+
+                    <option value="">
+                        Select your year
+                    </option>
+
+                    <option value="1">
+                        First Year
+                    </option>
+
+                    <option value="2">
+                        Second Year
+                    </option>
+
+                    <option value="3">
+                        Third Year
+                    </option>
+
+                    <option value="4">
+                        Fourth Year
+                    </option>
+
+                </select>
+
+                <span
+                    class="error"
+                    id="yearError"
+                    role="alert">
+                </span>
+
+            </div>
+
+
+            <!-- Gender -->
+            <fieldset class="form-group">
+
+                <legend>Gender *</legend>
+
+                <div class="radio-group">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Male">
+                        Male
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Female">
+                        Female
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Other">
+                        Other
+                    </label>
+
+                </div>
+
+                <span
+                    class="error"
+                    id="genderError"
+                    role="alert">
+                </span>
+
+            </fieldset>
+
+
+            <!-- Terms -->
+            <div class="form-group terms">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms">
+
+                    I agree to the Terms and Conditions. *
+
+                </label>
+
+                <span
+                    class="error"
+                    id="termsError"
+                    role="alert">
+                </span>
+
+            </div>
+
+
+            <!-- Submit -->
+            <button type="submit">
+                Register
+            </button>
+
+            <!-- Success Message -->
+            <div
+                id="successMessage"
+                class="success-message"
+                role="alert">
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
